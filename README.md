@@ -4,7 +4,9 @@ Solving partial differential equations (PDEs) in _Simulink_ with the method of c
 
 ## First-order quasilinear (FOQL) PDEs
 
-Library `PDECharactLib.slx` contains the `FOQL PDE` subsystem for modeling first-order quasilinear PDEs. Detailed description is available at https://arxiv.org/abs/1907.13419.
+Library `PDECharactLib.slx` contains the `FOQL PDE` subsystem for modeling first-order quasilinear PDEs of the form
+$$w_t + v\big( t, x, w(t, \cdot)_{[0, \ell]} \big) w_x = f\big( t, x, w(t, \cdot)_{[0, \ell]} \big)$$
+with initial condition $w(0, x) = w_0(x)$ ($x \in [0, \ell]$) and boundary condition $w(t, 0) = u(t)$ ($t \ge 0$). Detailed description of the method is available at https://arxiv.org/abs/1907.13419.
 
 Examples:
 * `FOQL_PDE_SimpleExample.slx`: simple example of using the `FOQL PDE` subsystem.
